@@ -1,0 +1,87 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: #071e67;
+}
+
+.main_header {
+    background-color: #071e67;
+    color: ghostwhite;
+}
+.is-sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index:1000;
+}
+
+.container-fluid {
+    margin-left: 125px;
+    margin-right: 125px;
+}
+
+.container-top {
+    padding-left:80px;
+}
+.container-mid {
+    margin-left: 0px;
+}
+.container_last{
+    /*margin-right:20px;*/
+}
+
+#mainpage_background {
+    /*padding: 0px;*/
+    background: url(https://scopeindia.org/images/slider_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    width: 111%;
+    height: 500%;
+    opacity: 1;
+    z-index: -20;
+    margin-left: -64px;
+    margin-top: -30px;
+}
+
+.top-parallel-wrap {
+    left: 100px;
+    top: 0px;
+    z-index: -1;
+    padding-left: 340px;
+    padding-top: 200px;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 50%;
+
+}
+.Content {
+    background-color: #050a4c;
+    width: 118%;
+    margin-left: -107px;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
