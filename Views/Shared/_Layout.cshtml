@@ -8,39 +8,36 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ScopeIndia.styles.css" asp-append-version="true" />
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+   ey
+   
 </head>
 <body>
     <header class="is-sticky">
-       <div class="main_header ">
+        <div class="main_header ">
             <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light box-shadow mb-3">
-                
-                
+
+
                 <div class=" container-fluid">
                     <div class="container-top">
                         <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                             <ul class="navbar-nav flex-grow-1">
                                 <li class="nav-item">
-                                    <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                                    <a class="nav-link text-light" asp-area="" asp-controller="WebHome" asp-action="Index">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Privacy">About Us</a>
+                                    <a class="nav-link text-light" asp-area="" asp-controller="WebHome" asp-action="Privacy">About Us</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Contact">Contact</a>
+                                    <a class="nav-link text-light" asp-area="" asp-controller="WebHome" asp-action="Contact">Contact</a>
                                 </li>
                             </ul>
                         </div>
 
                     </div>
-                    
+
 
                     <div class="container-mid">
-                        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/uploads/scope-india-logo-bird.png" alt="Scope India Logo" width="70" height="60" /></a>
+                        <a class="navbar-brand" asp-area="" asp-controller="WebHome" asp-action="Index"><img src="~/uploads/scope-india-logo-bird.png" alt="Scope India Logo" width="50" height="40" style="padding-top: 3px;" /></a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                                 aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
@@ -51,22 +48,22 @@
                         <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                             <ul class="navbar-nav flex-grow-1">
                                 <li class="nav-item">
-                                    <a class="nav-link text-light" asp-area="" asp-controller="Web" asp-action="Registration">Registration</a>
+                                    <a class="nav-link text-light" asp-area="" asp-controller="WebHome" asp-action="Registration">Registration</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-light" asp-area="" asp-controller="Web" asp-action="Login">Login</a>
+                                    <a class="nav-link text-light" asp-area="" asp-controller="WebHome" asp-action="Login">Login</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-light" asp-area="" asp-controller="Web" asp-action="StudentDashboard">Student Dashboard</a>
+                                    <a class="nav-link text-light" asp-area="" asp-controller="WebHome" asp-action="StudentDashboard">Student Dashboard</a>
                                 </li>
                             </ul>
                         </div>
 
                     </div>
-                    
+
                 </div>
             </nav>
-       </div>
+        </div>
     </header>
     <div class="container">
         <main role="main" class="pb-3">
@@ -75,8 +72,48 @@
     </div>
 
     <footer class=" footer text-muted">
-        <div class="container">
-            &copy; 2024 - ScopeIndia - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        <div class="container-footer">
+            @* &copy; 2024 - ScopeIndia - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a> *@
+            <div class="footer-one">
+                <img src="https://scopeindia.org/images/snowpark-footer-logo.png" style="width: 590px;height: 104px;padding-top: 12px;" />
+                <div class="row">
+                    <div class="col-md-12">
+                        &ensp; &nbsp; Technopark Kerala || Tampanoor Kerala || Kochi Kerala || Nagercoil TamilNadu
+                    </div>
+                    <div id="footer-two">
+                        <img src="https://scopeindia.org/images/iso_iaflogo.png" style="width: 626px;height: 104px;" />
+                    </div>
+                    <div>
+                        <p style="padding-left: 186px;">An ISO 9001:2015 Certified Company</p>
+                        <p style="padding-left: 124px;">All Rights Reserved <a href="https://www.suffixesolutions.com/" target="_blank" style="color:white">Suffix E solutions </a>"© 2007-2024" </p>
+                    </div>
+                    <div class="row" style="padding-right: 40px;">
+                        <div class="col-md-2">
+                            <a class="text-white" href="tel:+91745936073"> 9745936073 (TPK)</a>
+                        </div>
+                        <div class="col-md-2">
+                            <a class="text-white" href="tel:+91745936073"> 9745936073 (TVM)</a>
+                        </div>
+                        <div class="col-md-2">
+                            <a class="text-white" href="tel:+917592939481"> 7592939481 (EKM)</a>
+                        </div>
+                        <div class="col-md-2">
+                            <a class="text-white" href="tel:+918075536185"> 8075536185 (NGL)</a>
+                        </div>
+                        <div class="col-md-2">
+                            <a class="text-white" target="_blank" href="mailto:info@scopeindia.org"> info@scopeindia.org</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

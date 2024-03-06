@@ -1,0 +1,323 @@
+﻿@model ScopeIndia.Models.Registration;
+<div id="registration-main-container">
+    <div class="text-center text-light">
+        <h1 class="text-warning">Register Your Details</h1><br />
+        <h3>It's just a matter of 80 days to an IT job!</h3><br />
+    </div>
+    <div class="container-fluid d-flex justify-content-center">
+        <div class="container-fluid h-85 w-75" id="container-registration">
+            <br />
+            <form asp-controller="WebHome" asp-action="Registration" method="post" enctype="multipart/form-data">
+                <fieldset>
+                    <legend class="text-center">REGISTRATION FORM</legend>
+
+                    <div class="row mb-3">
+                        <div class="col">
+                            <label asp-for="FirstName" class="form-label">First Name:</label>
+                            <input asp-for="FirstName" class="form-control" id="FirstName" />
+                            <span asp-validation-for="FirstName" class="text-danger"></span>
+                        </div>
+                        <div class="col">
+                            <label asp-for="LastName" class="form-label">Last Name:</label>
+                            <input asp-for="LastName" class="form-control" id="LastName" />
+                            <span asp-validation-for="LastName" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col">
+                            <label for="Gender" class="form-label">Gender:</label>
+                            <div class="form-group">
+                                <div class="form-check form-check-inline">
+                                    <input asp-for="Gender" class="form-check-input" type="radio" value="Male" checked>
+                                    <label class="form-check-label" for="male">Male</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input asp-for="Gender" class="form-check-input" type="radio" value="Female" id="female">
+                                    <label class="form-check-label" for="female">Female</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input asp-for="Gender" class="form-check-input" type="radio" value="Other" id="other">
+                                    <label class="form-check-label" for="other">Other</label>
+                                </div>
+                            </div>
+                            <span asp-validation-for="Gender" class="text-danger"></span>
+                        </div>
+                        <div class="col">
+                            <label asp-for="DateOfBirth" class="form-label">Date Of Birth:</label>
+                            <input asp-for="DateOfBirth" class="form-control" id="DateOfBirth" placeholder="dd-mm-yyyy" />
+                            <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+                        </div>
+
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col">
+                            <label asp-for="Email" class="form-label">Email:</label>
+                            <input asp-for="Email" class="form-control" id="Email" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label asp-for="Country" class="form-label">Country:</label>
+                                <select asp-for="Country" id="country" class="form-control">
+                                    <option value="">Select Country</option>
+                                </select>
+                                <span asp-validation-for="Country" class="text-danger"></span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col">
+                            <label asp-for="State" class="form-label">State:</label>
+                            <select asp-for="State" class="form-control" id="state">
+                                <option value="">Select State</option>
+                            </select>
+                            <span asp-validation-for="State" class="text-danger"></span>
+                        </div>
+
+
+                        <div class="col">
+                            <label asp-for="City" class="form-label">City:</label>
+                            <select asp-for="City" class="form-control" id="city">
+                                <option value="">Select City</option>
+                            </select>
+                            <span asp-validation-for="City" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label asp-for="Courses" class="form-label">Choose your Course :</label>
+                                <select asp-for="Courses" class="form-select" id="Courses">
+                                    <option value="">Select a course...</option>
+                                    <option value="Course1">Java Full Stack Internship</option>
+                                    <option value="Course2">Python Full Stack Internship</option>
+                                    <option value="Course3">PHP Full Stack Internship</option>
+                                    <option value="Course4">.Net Core Full Stack Internship</option>
+                                    <option value="Course5">MERN Full Stack Internship</option>
+                                    <option value="Course6">Android/iOS Mobile App Course in Google Flutter</option>
+                                    <option value="Course7">Android/iOS Mobile App Course in IONIC</option>
+                                    <option value="Course8">Website Designing Course</option>
+                                    <option value="Course9">Software Testing Advanced Course</option>
+                                    <option value="Course10">Networking, Server, & Cloud</option>
+                                    <option value="Course11">Networking, Server, & Cloud Administration</option>
+                                    <option value="Course12">AWS Architect Associate</option>
+                                    <option value="Course13">Ms Azure Cloud Administrator</option>
+                                    <option value="Course14">Red Hat Certified System Administrator (RHCSA)</option>
+                                </select>
+                                <span asp-validation-for="Courses" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="MobileNumber" class="form-label">MobileNumber:</label>
+                                <input type="tel" asp-for="MobileNumber" class="form-control" id="MobileNumber" />
+                                <span asp-validation-for="MobileNumber" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label asp-for="Hobbieslist" class="form-label">Hobbies:</label>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-check">
+                                        <input type="checkbox" name="Hobbieslist" value="Reading" class="form-check-input" />
+                                        <label class="form-check-label">Reading</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" name="Hobbieslist" value="Gaming" class="form-check-input" />
+                                        <label class="form-check-label">Gaming</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" name="Hobbieslist" value="Cooking" class="form-check-input" />
+                                        <label class="form-check-label">Cooking</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" name="Hobbieslist" value="Crafting" class="form-check-input" />
+                                        <label class="form-check-label">Crafting</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-check">
+                                        <input type="checkbox" name="Hobbieslist" value="Traveling" class="form-check-input" />
+                                        <label class="form-check-label">Traveling</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" name="Hobbieslist" value="Trekking" class="form-check-input" />
+                                        <label class="form-check-label">Trekking</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" name="Hobbieslist" value="Exploring New technologies" class="form-check-input" />
+                                        <label class="form-check-label">Exploring New technologies</label>
+                                    </div>
+                                  
+                                </div>
+                            </div>
+                            <span asp-validation-for="Hobbieslist" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col">
+                            <label asp-for="ImageFile" class="form-label">Upload your avatar:</label>
+                            <div class="input-group">
+                                <input asp-for="ImageFile" type="file" class="form-control" id="imagefile" />
+                                <button type="submit" class="btn btn-primary btn-sm">Upload</button>
+                            </div>
+                            <span asp-validation-for="ImageFile" class="text-danger"></span>
+                        </div>
+                        @if (ViewBag != null)
+                        {
+                            <p>@ViewBag.UploadStatus</p> <br />
+                        }
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col text-center">
+                            <button type="submit" class="btn btn-primary">Register</button>
+                        </div>
+                    </div>
+                </fieldset>
+                <br />
+            </form>
+        </div>
+
+    </div>
+</div>
+
+@section Scripts
+{
+    @await Html.PartialAsync("/Views/Shared/_ValidationScriptsPartial.cshtml")
+    <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            
+            var data = {
+                "countries": [
+                    {
+                        "name": "India",
+                        "states": [
+                            {
+                                "name": "Kerala",
+                                "cities": ["Trivandrum", "Kollam", "Kasaragodr", "Kannur", "Wayanad", "Kozhikode", "Malappuram", "Ernakulam", "Palakkad", "Alappuzha", "Thrissur"]
+                            },
+                            {
+                                "name": "TamilNadu",
+                                "cities": ["Kancheepuram", "Karur", "Thiruvallur", "Thoothukudi", "Thirunelveli", "Tirupathur", "Vellore", "Namakkal", "Nagercoil", "Salem", "Coimbatore", "Chennai"]
+                            },
+                            {
+                                "name": "Karnataka",
+                                "cities": ["Belagavi Division", "Bengaluru Division", "Kalaburagi Division", "Mysuru Division", "Bengaluru Rural", "Bengaluru Urban"]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "USA",
+                        "states": [
+                            {
+                                "name": "Alabama",
+                                "cities": ["Montgomery", "Huntsville", "Dothan", "Birmingham", "Selma", "Tuscaloosa"]
+                            },
+                            {
+                                "name": "Alaska",
+                                "cities": ["Juneau", "Anchorage", "Cold Bay", "Fairbanks", "Nome", "Anchorage", "Beaufort Sea", "KodiakBethel", "Bethel"]
+                            },
+                            {
+                                "name": "Hawaii",
+                                "cities": ["Honolulu", "Oahu Island", "Maui Island", "Hilo", "Nome", "Wahiawa", "Wailuku", "Lihue", "Niihau Island"]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UK",
+                        "states": [
+                            {
+                                "name": "England",
+                                "cities": ["London", "Birmingham", "Manchester", "Liverpool", "Bristol", "Leeds", "Newcastle upon Tyne", "Nottingham", "Sheffield", "Leicester", "Edinburgh", "Glasgow", "Cardiff"]
+                            },
+                            {
+                                "name": "Scotland",
+                                "cities": ["Glasgow", "Edinburgh", "Aberdeen", "Dundee", "Inverness", "Stirling", "Perth"]
+                            },
+                            {
+                                "name": "Wales",
+                                "cities": ["Cardiff", "Swansea", "Newport", "Bangor", "St Davids"]
+                            },
+                            {
+                                "name": "Northern Ireland",
+                                "cities": ["Belfast", "Londonderry", "Armagh", "Newry", "Derry"]
+                            }
+                        ]
+                    }
+                ]
+            };
+
+            
+            function populateCountryDropdown() {
+                var countryDropdown = $('#country');
+                countryDropdown.empty();
+                countryDropdown.append($('<option>').text('Select Country').val(''));
+                $.each(data.countries, function (index, country) {
+                    countryDropdown.append($('<option>').text(country.name).val(country.name));
+                });
+            }
+
+           
+            function populateStateDropdown(selectedCountry) {
+                var stateDropdown = $('#state');
+                stateDropdown.empty();
+                stateDropdown.append($('<option>').text('Select State').val(''));
+                var selectedCountryData = data.countries.find(country => country.name === selectedCountry);
+                if (selectedCountryData) {
+                    $.each(selectedCountryData.states, function (index, state) {
+                        stateDropdown.append($('<option>').text(state.name).val(state.name));
+                    });
+                }
+            }
+
+           
+            function populateCityDropdown(selectedState) {
+                var cityDropdown = $('#city');
+                cityDropdown.empty();
+                cityDropdown.append($('<option>').text('Select City').val(''));
+                var selectedCountryData = data.countries.find(country =>
+                    country.states.some(state => state.name === selectedState)
+                );
+                if (selectedCountryData) {
+                    var selectedStateData = selectedCountryData.states.find(state => state.name === selectedState);
+                    $.each(selectedStateData.cities, function (index, city) {
+                        cityDropdown.append($('<option>').text(city).val(city));
+                    });
+                }
+            }
+
+           
+            populateCountryDropdown();
+
+            
+            $('#country').change(function () {
+                var selectedCountry = $(this).val();
+                populateStateDropdown(selectedCountry);
+            });
+
+            
+            $('#state').change(function () {
+                var selectedState = $(this).val();
+                populateCityDropdown(selectedState);
+            });
+        });
+
+        $(document).ready(function () {
+            // Set the calender
+            $("#DateOfBirth").datepicker({
+                dateFormat: 'dd-mm-yy', 
+                changeMonth: true, 
+                changeYear: true, 
+                yearRange: "-100:+0", 
+                maxDate: '0',
+            });
+        });
+    </script>
+}

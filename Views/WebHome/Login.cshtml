@@ -1,0 +1,137 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model ScopeIndia.Models.Login;
+<div class="container-fluid "id="login-main-container">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+                <div class="heading-text text-light" style="padding-left: 37px;">
+                    <h1 class="text-warning">Login</h1><br />
+                    <h3>It's just a matter of 80 days to an IT job!</h3><br />
+                </div>
+
+                <div class="container-fluid d-flex">
+
+                    <div class="container-fluid h-85 w-85 justify-content-center" id="container-login">
+                        <br />
+
+                        <form asp-controller="Web" asp-action="Login" method="post">
+                            <fieldset>
+                                <legend class="text-center">Enter your Login Details</legend>
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <label asp-for="Email" class="form-label">Email:</label>
+                                        <input asp-for="Email" class="form-control" id="Email" />
+                                        <span asp-validation-for="Email" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <label asp-for="Password" class="form-label">Password:</label>
+                                        <input asp-for="Password" class="form-control" id="password" />
+                                        <span asp-validation-for="Password" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <span class="a-label a-checkbox-label">Keep me signed in</span>
+                                    </div>
+                                </div>
+
+
+                                <div class="row mb-3">
+                                    <div class="col text-center">
+                                        <button type="submit" class="btn btn-primary">Login</button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <br />
+                        </form>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col" style="margin-top: 82px;">
+                <div class="container-fluid d-flex">
+                    <div class="row">
+                        <!-- Start of row -->
+                        <div class="col">
+                            <!-- First column -->
+                            <div class="row" style="margin-left: 2px;margin-right: 28px;">
+                                <div class="container-fluid h-85 w-78 justify-content-center" id="container-login">
+                                    <br />
+                                    <div class="login-sub-container" style="text-align:center">
+                                        <h2 style="color:green">1000+</h2>
+                                        <h4 style="color:blue"> STUDENTS ARE</h4>
+                                        <h4 style="color:blue">TRAINED EVERY YEAR</h4>
+                                    </div>
+                                </div>
+                           </div>
+                        </div> <!-- End of first column -->
+
+                        <div class="row">
+                            <div class="col">
+                                <!-- Second column -->
+                                <div class="container-fluid h-85 w-85 justify-content-center" id="container-login">
+                                    <br />
+                                    <div class="login-sub-container" style="text-align:center">
+                                        <h2 style="color:green">30+</h2>
+                                        <h4 style="color:blue"> COMPUTER COURSES</h4>
+                                        <h4 style="color:blue"></h4>
+                                    </div>
+                                </div>
+                            </div> <!-- End of second column -->
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <!-- Third column -->
+                                <div class="container-fluid h-85 w-85 justify-content-center" id="container-login">
+                                    <br />
+                                    <div class="login-sub-container" style="text-align:center">
+                                        <h2 style="color:green">95%</h2>
+                                        <h4 style="color:blue"> STUDENTS ARE GETTING</h4>
+                                        <h4 style="color:blue">PLACED EVERY YEAR</h4>
+                                    </div>
+                                </div>
+                            </div> <!-- End of third column -->
+                        </div>
+                    </div> <!-- End of row -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-group" style=" border-radius: 10px;padding-bottom: 91px;">
+        <div class="card">
+            
+            <div class="card-body">
+                <h5 class="card-title"><strong>Effective and Easy Learning</strong></h5>
+                <p class="card-text">We organize corporate training with Classroom/online/virtual sessions lead by industry expert trainers to deliver best results with lots of discussions and Q&A sessions to give you best training..</p>
+                
+            </div>
+        </div>
+        <div class="card">
+            
+            <div class="card-body">
+                <h5 class="card-title"><strong>Customised Corporate Programs</strong></h5>
+                <p class="card-text">We believe that when you search for corporate training you already have what type of skills or technology training you need that’s why we follow your guidelines for course content for training..</p>
+                
+            </div>
+        </div>
+        <div class="card">
+            <i class="fa fa-desktop card-img-top"></i>
+            
+            <div class="card-body">
+                <h5 class="card-title"><strong>Updated Course Content</strong></h5>
+                <p class="card-text">To win in this competitive market your employees always be ready with latest skills, technology, scenarios, and that’s why we are associated with multiple experts to perform regular updates on training content..</p>
+                
+            </div>
+        </div>
+    </div>
+</div>

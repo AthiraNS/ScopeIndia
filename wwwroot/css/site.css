@@ -33,9 +33,12 @@ body {
     z-index:1000;
 }
 
+
 .container-fluid {
-    margin-left: 125px;
-    margin-right: 125px;
+    /*margin-left: 125px;
+    margin-right: 125px;*/
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .container-top {
@@ -47,27 +50,43 @@ body {
 .container_last{
     /*margin-right:20px;*/
 }
+#index-container {
+    /*background-color: #050a4c;*/
+    background-color: rgb(5, 10, 76);
+    width: 1244px;
+    margin-top: 39px;
+    margin-right: 0px;
+    margin-left: -60px;
+    margin-bottom: 531px;
+}
+
 
 #mainpage_background {
-    /*padding: 0px;*/
     background: url(https://scopeindia.org/images/slider_bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center bottom;
-    width: 111%;
+    width: 105%;
     height: 500%;
     opacity: 1;
     z-index: -20;
-    margin-left: -64px;
-    margin-top: -30px;
+    margin-left: -59px;
+    margin-top: 0px;
 }
+.container-content {
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+    
 
 .top-parallel-wrap {
     left: 100px;
     top: 0px;
     z-index: -1;
-    padding-left: 340px;
-    padding-top: 200px;
+    padding-left: 432px;
+    padding-top: 159px;
 }
 
 .carousel-inner img {
@@ -75,13 +94,180 @@ body {
     height: 50%;
 
 }
+/*.Content {
+    background-color: #050a4c;
+    width: 100%;
+    margin-left: -107px;
+}*/
+
 .Content {
     background-color: #050a4c;
-    width: 118%;
-    margin-left: -107px;
+    width: 100%;
+    margin-left: 0px;
+    padding: 52px;
 }
 .clearfix::after {
     content: "";
     clear: both;
     display: table;
+}
+
+.form-horizontal {
+    width: 80%;
+    margin-left: 33px;
+}
+#call-back {
+    padding-top: 0px;
+}
+
+#contact-main-container {
+    background-color:#050a4c;
+}
+.contact-container {
+    background: url(https://scopeindia.org/images/snowpark-skis-headerbg2.jpg);
+    /*margin-left: -65px;
+    margin-right: -65px;
+    margin-top: 131px;*/
+    /*padding-bottom: 588px;*/
+    background-color: inherit; /* Inherit the background color from its parent */
+    width: 100%;
+    height: 100%;
+}
+.contact col-md-8 {
+    padding-left: 125px;
+}
+.sub-container {
+    margin-top: -48px;
+    padding-top: 87px;
+}
+.star5 {
+    width: 35%;
+    margin-left: 397px;
+}
+/*.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: 0px;
+    margin-left: 0px;
+}*/
+.sub-container text-white text-center {
+    padding-top: 64px;
+    margin-top: -100px;
+}
+
+#privacy-main-container {
+    background-image: url(https://scopeindia.org/images/snowpark-skis-headerbg2.jpg);
+    background-attachment: fixed;
+    margin-left: -61px;
+    margin-right: -61px;
+    padding-top: 135px;
+    padding-bottom: 411px;
+}
+.ssb-sb-content {
+    margin-bottom: 0px;
+    padding-left: 0px;
+}
+
+.abb-section {
+    padding-top: 66px;
+    padding-bottom: 150px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    margin-left: -70px;
+    text-align: center; /* Align text content center */
+}
+
+
+.container-footer {
+    background-color: #021b5b;
+    padding-bottom: 35px;
+    padding-top: 93px;
+    padding-left: 308px;
+    margin-right: -15px;
+}
+
+.footer-one {
+    /*  left: 100px;*/
+    top: 0px;
+    z-index: -1;
+    /*padding-left: 304px;*/
+    /*padding-top: 159px;*/
+}
+.footer-link{
+    color: white;
+}
+
+.fadeInBottom {
+    animation-name: fadeInBottom;
+}
+.cssanimation {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+.course-container {
+    padding-left: 113px;
+}
+.course-list {
+    padding-bottom: 54px;
+}
+.sub-sub-container {
+    color: white;
+    margin-bottom: 558px;
+}
+.contact-main-container {
+    /* background-color: #050a4c;*/
+    margin-top: 131px;
+    background-color: #071e67; /* Set the desired background color */
+    width: 100%;
+    height: 100vh; /* Make the height of the container equal to the viewport height */
+    margin: 0; /* Remove any default margin */
+    padding: 0;
+    margin-left: -57px;
+    width: 111%;
+    padding-bottom: 2px;
+}
+#contact-main-container {
+    margin-left: -57px;
+    width: 111%;
+    padding-bottom: 2px;
+}
+#registration-main-container {
+    margin-bottom: 500px;
+    margin-top: 137px;
+}
+.container-fluid h-85 w-75 bg-secondary {
+    margin-left: 102px;
+    padding-left: 4px;
+}
+#container-registration {
+    border-radius: 20px;
+    background: url(https://scopeindia.org/images/si-call-back-bg.jpg);
+    background-attachment:fixed;
+    background-position: left top;
+    background-repeat: repeat;
+}
+#container-login {
+    border-radius: 20px;
+    background: url(https://scopeindia.org/images/si-call-back-bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-position: left top;
+    background-repeat: repeat;
+    display: flex;
+    padding-top: 21px;
+    margin:10px;
+}
+
+#login-main-container {
+    padding-bottom: 500px;
+    padding-top: 94px;
+    background: url(https://scopeindia.org/images/snowpark-home-slider-background.jpg);
+    background-attachment:fixed;
+    z-index:1000;
+    
+    
 }

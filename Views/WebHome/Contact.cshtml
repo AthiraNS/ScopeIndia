@@ -1,0 +1,174 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model ScopeIndia.Models.Contact;
+<div id="contact-main-container" class="container-fluid" style="margin-top: 131px;">
+    <div class="contact-container">
+        <div class="sub-container text-white text-center">
+            <h1 class="text-warning">SCOPE INDIA is open 365 days a year</h1>
+            <h2>Let's discuss your career, 24/7 free Consultation</h2>
+        </div>
+        <div class="sub-container text-white">
+            <img src="https://scopeindia.org/images/5star.png" class="star5" />
+            <p class="text-center">Google 4.9 * Rated Institute</p>
+        </div>
+        <div class="contact col-md-12" style="margin-top: 353px;padding-bottom: 31px;">
+            <div class="container clearfix" style="padding: 3%;margin-top: -160px!important; background-image: url(https://scopeindia.org/images/si-call-back-bg.jpg); background-repeat: no-repeat; background-position: center top;">
+
+                <div class="sb_content">
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6" id="call-back">
+                                <img class="sb_container" src="~/uploads/Click_to_call.jpg" alt="Click_To_Call" width="500" height="400">
+
+                            </div>
+                            <div class="col-md-6">
+                                <div class="ssb_sb_content" style="padding-left: 50px;">
+                                    <h3 style="color: #050a4c">
+                                        SCOPE INDIA
+                                        <br> is open 365 days a year
+                                    </h3>
+                                    <p>We are open 7 days 24hrs to talk to you and listen to your queries.</p>
+                                    <h4 style="color: #050a4c" class="text-center">GET A FREE CALL BACK</h4>
+
+
+                                    <div class="container">
+                                        <div class="row justify-content-center">
+                                            <div class="col-md-16">
+                                                <div class="card bg-transparent">
+                                                    <div class="card-body">
+                                                        <form asp-controller="WebHome" asp-action="Contact" method="post">
+                                                            <div class="form-group">
+                                                                @* <label for="FullName">Full Name:</label> *@
+                                                                <input asp-for="FullName" class="form-control" id="FullName" placeholder="Enter your Full Name">
+                                                                <span asp-validation-for="FullName" class="text-danger"></span>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                @* <label for="PhoneNumber">Phone Number:</label> *@
+                                                                <input asp-for="PhoneNumber" class="form-control" id="PhoneNumber" placeholder="Enter your PhoneNumber">
+                                                                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                @* <label for="EmailAddress">Email Address:</label> *@
+                                                                <input asp-for="EmailAddress" class="form-control" id="EmailAddress" placeholder="Enter your Email Address">
+                                                                <span asp-validation-for="EmailAddress" class="text-danger"></span>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <button type="submit" class=" btn btn-success btn-block">Call Me</button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="sub-sub-container text-light">
+        <div class="container">
+            <h2>Locations</h2>
+            <div class="row location">
+                <div class="col-md-6" style="padding:10px;">
+                    <div class="thumbnail" style="background-color: #041a6b!important; padding: 30px 30px 10px 30px;">
+                        <h3>Technopark TVM, Kerala</h3>
+                        <ul class="location-bar">
+                            <li><i class="bi bi-telephone"></i>Phase 1, Main Gate, Diamond Arcade, Near Technopark, Trivandrum</li>
+                            <li><i class="icon-phone"></i><a href="tel:+919745936073">9745936073</a></li>
+                            <li><i class="icon-mail"></i><a href="mailto:technopark@scopeindia.org" target="_blank">technopark@scopeindia.org</a></li>
+                            <li><i class="icon-link"></i><a href="https://scopeindia.org/" target="_blank">www.scopeindia.org</a></li>
+                            <li><i class="icon-map"></i><a href="https://www.google.com/maps/place/SCOPE+INDIA+TECHNOPARK+-+Courses+in+Python,+PHP,+Java,+ASP+.Net,+Software+Testing,+Flutter,+AWS,+Azure,+CCNA,+RHCE,+DevOps/@@8.5570739,76.7241557,12z/data=!4m6!3m5!1s0x3b05bf3aeef98449:0xfc037c61131d82b5!8m2!3d8.5570739!4d76.876591!16s%2Fg%2F11vhd40jjl?entry=ttu" target="_blank">Location Route Map</a></li>
+                           
+
+                        </ul>
+
+                    </div>
+                    
+                </div>
+                <div class="col-md-6" style="padding:10px;">
+                    <div class="thumbnail" style="background-color: #041a6b!important; padding: 30px 30px 10px 30px;">
+                        <h3>Thampanoor TVM, Kerala</h3>
+                        <ul class="location-bar">
+                            <li><i class="icon-location"></i>TC 25/1403/3, Athens Plaza, SS Kovil Road, Thampanoor, Trivandrum, Kerala 695001</li>
+                            <li><i class="icon-phone"></i><a href="tel:+919745936073"> 9745936073</a></li>
+                            <li><i class="icon-mail"></i><a href="mailto:info@scopeindia.org">info@scopeindia.org</a></li>
+                            <li><i class="icon-link"></i><a href="https://scopeindia.org/">www.scopeindia.org</a></li>
+                            <li><i class="icon-map"></i><a href="https://maps.app.goo.gl/6NCJL7abZbwHqdKq8" target="_blank">Location Route Map</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-6" style="padding:10px;">
+                    <div class="thumbnail" style="background-color: #041a6b!important; padding: 30px 30px 10px 30px;">
+                        <h3>Kochi, Kerala</h3>
+                        <ul class="location-bar">
+                            <li><i class="icon-location"></i> SCOPE INDIA, Vasanth Nagar Rd, near JLN Metro Station, Kaloor, Kochi, Kerala 682025</li>
+                            <li><i class="icon-phone"></i><a href="tel:+917592939481"> 7592939481</a></li>
+                            <li><i class="icon-mail"></i><a href="mailto:kochi@scopeindia.org">kochi@scopeindia.org</a></li>
+                            <li><i class="icon-link"></i><a href="https://scopeindia.org/">www.scopeindia.org</a></li>
+                            <li><i class="icon-map"></i><a href="https://g.page/r/CWv07KhFfP7dEAE" target="_blank">Location Route Map</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6" style="padding:10px;">
+                    <div class="thumbnail" style="background-color: #041a6b!important; padding: 30px 30px 10px 30px;">
+                        <h3>Nagercoil, Tamil Nadu</h3>
+                        <ul class="location-bar">
+                            <li><i class="icon-location"></i>SCOPE INDIA, Near WCC College, Palace Rd, Nagercoil, Tamil Nadu 629001</li>
+                            <li><i class="icon-phone"></i><a href="tel:+918075536185">8075536185</a></li>
+                            <li><i class="icon-mail"></i><a href="mailto: ngl@scopeindia.org"> ngl@scopeindia.org</a></li>
+                            <li><i class="icon-link"></i><a href="https://scopeindia.org/">www.scopeindia.org</a></li>
+                            <li><i class="icon-map"></i><a href="https://maps.app.goo.gl/3wZbmjApQGJs6k2P8" target="_blank">Location Route Map</a></li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-3" style="padding:10px;">
+                </div>
+                <div class="col-md-6" style="padding:10px;">
+                    <div class="thumbnail" style="background-color: #041a6b!important; padding: 30px 30px 10px 30px;">
+                        <h3>Nagercoil, Tamil Nadu</h3>
+                        <ul class="location-bar">
+                            <li><i class="icon-location"></i>SCOPE INDIA, Pharma Street, 5/2 Ward 28, Distillery Road, Putheri Nagercoil (Near WCC Jn)</li>
+                            <li><i class="icon-phone"></i><a href="tel:+918075536185">8075536185</a></li>
+                            <li><i class="icon-mail"></i><a href="mailto:ngl@scopeindia.org">ngl@scopeindia.orgg</a></li>
+                            <li><i class="icon-link"></i><a href="https://scopeindia.org/">www.scopeindia.org</a></li>
+                            <li><i class="icon-map"></i><a href="https://maps.app.goo.gl/GZ9NMPfawcry6RT66" target="_blank">Location Route Map</a></li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+                <div class="col-md-3" style="padding-top:10px;padding-bottom:30px">
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
