@@ -48,7 +48,6 @@
                             <input asp-for="DateOfBirth" class="form-control" id="DateOfBirth" placeholder="dd-mm-yyyy" />
                             <span asp-validation-for="DateOfBirth" class="text-danger"></span>
                         </div>
-
                     </div>
 
                     <div class="row mb-3">
@@ -65,7 +64,6 @@
                                 </select>
                                 <span asp-validation-for="Country" class="text-danger"></span>
                             </div>
-
                         </div>
                     </div>
 
@@ -162,7 +160,7 @@
                             <label asp-for="ImageFile" class="form-label">Upload your avatar:</label>
                             <div class="input-group">
                                 <input asp-for="ImageFile" type="file" class="form-control" id="imagefile" />
-                                <button type="submit" class="btn btn-primary btn-sm">Upload</button>
+                                @* <button type="submit" class="btn btn-primary btn-sm">Upload</button> *@
                             </div>
                             <span asp-validation-for="ImageFile" class="text-danger"></span>
                         </div>

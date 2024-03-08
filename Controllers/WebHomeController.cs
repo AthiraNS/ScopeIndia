@@ -85,20 +85,21 @@ namespace ScopeIndia.Controllers
             _registration.Insert(registration);
             List<Registration> list = _registration.GetAll();
             Registration registration1 = _registration.GetByEmail(registration.Email);
-            string url = $"http://localhost:7187/WebHome/PasswardGeneration/";
+            string url = $"http://localhost:7185/WebHome/PasswordGeneration";
+            //string url = $"http://localhost:7185/WebHome/PasswardGeneration/";
 
             var email = new MimeMessage();
             email.From.Add(MailboxAddress.Parse("nandaathi@gmail.com"));
             email.To.Add(MailboxAddress.Parse(registration.Email));
 
-            
-            string emailBody = $"Hi, {registration.FirstName}\nYour registered mail address is {registration.Email}\n";
 
+            //string emailBody = $"Hi, {registration.FirstName}\nYour registered mail address is {registration.Email}\n";
+            string emailBody = $"Hi, {registration.FirstName},<br/><br/>Your registered mail address is {registration.Email}.<br/><br/>Click <a href=\"{url}\">here</a> to confirm registration.";
 
 
             email.Body = new TextPart(TextFormat.Plain)
             {
-                Text = $"\n\nClick on this url to confirm Registration"+$"{url}"
+                Text = $"\n\nClick on this url to confirm Registration" + $"{url}"
             };
 
             var smtp = new SmtpClient();
@@ -168,7 +169,7 @@ namespace ScopeIndia.Controllers
         }
         public IActionResult PasswordGeneration()
         {
-            return View();
+            return View("PasswordGeneration");
         }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
