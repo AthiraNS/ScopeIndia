@@ -16,10 +16,10 @@
 
                 <div class="container-fluid d-flex">
 
-                    <div class="container-fluid h-85 w-85 justify-content-center" id="container-login">
+                    <div class="container-fluid h-85 w-100 justify-content-center" id="container-login">
                         <br />
 
-                        <form asp-controller="Web" asp-action="Login" method="post">
+                        <form asp-controller="WebHome" asp-action="Login" method="post">
                             <fieldset>
                                 <legend class="text-center">Enter your Login Details</legend>
                                 <div class="row mb-3">
@@ -38,19 +38,33 @@
                                 </div>
                                 <div class="row mb-3">
                                     <div class="col">
-                                        <span class="a-label a-checkbox-label">Keep me signed in</span>
+                                        <div class="form-check" style="font-size:smaller">
+                                            <input class="form-check-input" type="checkbox" id="keepSignedIn" name="keepSignedIn">
+                                            <label class="form-check-label" for="keepSignedIn">Keep me signed in</label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check" style="font-size:smaller">
+                                            <a href="https://localhost:7185/WebHome/ForgotPassword" target="_blank">Forgot password?</a>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check" style="font-size:smaller">
+                                            <a href="https://localhost:7185/WebHome/FirstTimeLogin" target="_blank">New User?</a>
+                                        </div>
                                     </div>
                                 </div>
-
 
                                 <div class="row mb-3">
                                     <div class="col text-center">
                                         <button type="submit" class="btn btn-primary">Login</button>
                                     </div>
                                 </div>
+                                
                             </fieldset>
                             <br />
                         </form>
+                        
                     </div>
                 </div>
 

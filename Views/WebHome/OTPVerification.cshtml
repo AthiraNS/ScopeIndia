@@ -1,0 +1,26 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+
+<div class="text-center text-warning" style="margin-top: 100px;">
+
+    <h1> OTP VERIFICATION </h1>
+   
+</div>
+
+<div class="OTPVerification-container h-25 w-25 mx-auto" style="margin-top: 490px;margin-bottom: 633px;">
+    <form asp-action="OTPVerification" asp-controller="WebHome" method="post">
+
+        <div class="form-floating col-12" style="margin-top: -429px;">
+            <input name="otp" id="otp" class="form-control col-12" />
+            <label for="otp" ><b>Enter the OTP HERE</b></label>
+        </div>
+        <br />
+      
+        <button type="submit" class="btn btn-success form-control col-12">Submit</button>
+       
+    </form>
+</div>
+
+

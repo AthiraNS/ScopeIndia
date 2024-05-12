@@ -11,9 +11,14 @@ namespace ScopeIndia
             // Add services to the container.
             builder.Services.AddControllersWithViews();
             builder.Services.AddScoped<IRegistration, SqlRegistration>();
+            builder.Services.AddScoped<ICourse, SqlCourse>();
             builder.Configuration.GetConnectionString("istring");
-
+            builder.Services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(5);
+            });
             var app = builder.Build();
+            app.UseSession();
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())

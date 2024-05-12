@@ -1,0 +1,73 @@
+﻿@{
+    Layout = "_Layout";
+}
+@model ScopeIndia.Models.PasswordGeneration;
+@* <div class="text-center text-warning">
+
+    <h1> LOGIN</h1>
+</div>
+
+<div class="login-container h-25 w-25" id=" firsttime_viewpage">
+    <form asp-action="FirstTimeLogin" asp-controller="WebHome" method="post">
+
+        <div class="form-floating col-12">
+            <input name="Email" id="Email" class="form-control col-12" placeholder="Email" />
+            <label for="Email" id="Email">Email</label>
+        </div>
+        <br />
+        <br />
+        <button type="submit" class="btn btn-success form-control col-12">Submit</button>
+
+    </form>
+</div> *@
+
+<div class="container-fluid " id="login-main-container">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+                <div class="heading-text text-light" style="padding-left: 37px;">
+                    <h1 class="text-warning">Login</h1><br />
+                    <h3>Enter your registered mail address to get Otp!</h3><br />
+                </div>
+
+                <div class="container-fluid d-flex">
+
+                    <div class="container-fluid h-85 w-100 justify-content-center" id="container-login-firsttimelogin">
+                        <br />
+
+                        <form asp-controller="WebHome" asp-action="FirstTimeLogin" method="post">
+                            <fieldset>
+                                <legend class="text-center">Enter your Registered Email Address </legend>
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <label asp-for="Email" class="form-label">Email:</label>
+                                        <input asp-for="Email" class="form-control" id="Email" />
+                                        <span asp-validation-for="Email" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                
+                                
+
+                                <div class="row mb-3">
+                                    <div class="col text-center">
+                                        <button type="submit" class="btn btn-primary">Get Otp</button>
+                                    </div>
+                                </div>
+
+                            </fieldset>
+                            <br />
+                        </form>
+
+                    </div>
+                </div>
+
+
+            </div>
+            
+        </div>
+    </div>
+
+    
+</div>
+

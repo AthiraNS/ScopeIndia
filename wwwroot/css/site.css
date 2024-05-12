@@ -268,6 +268,199 @@ body {
     background: url(https://scopeindia.org/images/snowpark-home-slider-background.jpg);
     background-attachment:fixed;
     z-index:1000;
+}
+
+#password_viewpage {
+    background: url(https://scopeindia.org/images/si-call-back-bg.jpg);
+    background-attachment: fixed;
+    margin-top: 100px;
+    margin-bottom: 800px;
     
-    
+}
+
+#firsttime_viewpage {
+    background: url(https://scopeindia.org/images/si-call-back-bg.jpg);
+    background-attachment: fixed;
+    margin-top: 506px;
+    margin-bottom: 800px;
+}
+
+#container-login-firsttimelogin {
+    border-radius: 20px;
+    background: url(https://scopeindia.org/images/si-call-back-bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-position: left top;
+    background-repeat: repeat;
+    display: flex;
+    padding-top: 21px;
+    margin: 10px;
+    margin-bottom: 100px;
+}
+.UploadAvatar {
+    height: 150px;
+    width: 150px;
+}
+
+/*.login-container {
+    border: 2px solid white;
+    padding: 50px;
+    margin: 50px;
+    background-image: linear-gradient(black,darkblue);
+}*/
+.avatardiv {
+    border: 3px solid yellow;
+    margin: 10px;
+    padding: 10px;
+    background-color: #191731;
+    height: 130px;
+    width: 450px;
+}
+
+
+
+.OTPVerification-container {
+    border: 2px solid white;
+    padding: 50px;
+    margin: 50px;
+    background-image: linear-gradient(black,darkblue);
+}
+
+.PasswordGeneration-container {
+    border: 2px solid white;
+    padding: 50px;
+    margin: 50px;
+    background-image: linear-gradient(black,darkblue);
+}
+
+.ForgotPasswordOTP-container {
+    border: 2px solid white;
+    padding: 50px;
+    margin: 50px;
+    background-image: linear-gradient(black,darkblue);
+}
+
+.ResetPassword-container {
+    border: 2px solid white;
+    padding: 50px;
+    margin: 50px;
+    background-image: linear-gradient(black,darkblue);
+}
+
+.JoinBtn {
+    height: 30px;
+    width: 45px;
+    background-color: green;
+    color: white;
+    text-decoration: none;
+}
+
+.login-container {
+    border-radius: 25px;
+}
+
+.Message-container {
+    border-radius: 10px;
+    border: 2px solid #bd9914;
+    padding: 25px;
+}
+
+.space {
+    height: 250px;
+}
+
+.ToggleFirstName {
+    display: none;
+}
+
+.ToggleLastName {
+    display: none;
+}
+
+.ToggleCountry {
+    display: none;
+}
+
+.ToggleState {
+    display: none;
+}
+
+.ToggleCity {
+    display: none;
+}
+
+.ToggleEmail {
+    display: none;
+}
+
+.TogglePassword {
+    display: none;
+}
+
+.ToggleCourseName {
+    display: none;
+}
+
+.ToggleAvatar {
+    display: none;
+}
+
+.TogglePhone {
+    display: none;
+}
+
+.ToggleFirstNameButton {
+    height: 25px;
+    width: 50px;
+}
+
+.ToggleLastNameButton {
+    height: 25px;
+    width: 50px;
+}
+
+.ToggleCountryButton {
+    height: 25px;
+    width: 50px;
+}
+
+.ToggleStateButton {
+    height: 25px;
+    width: 50px;
+}
+
+.ToggleCityButton {
+    height: 25px;
+    width: 50px;
+}
+
+.ToggleEmailButton {
+    height: 25px;
+    width: 50px;
+}
+
+.TogglePasswordButton {
+    height: 25px;
+    width: 50px;
+}
+
+.ToggleCourseNameButton {
+    height: 25px;
+    width: 50px;
+}
+
+.ToggleAvatarButton {
+    height: 25px;
+    width: 50px;
+}
+
+.TogglePhoneButton {
+    height: 25px;
+    width: 50px;
+}
+
+.UploadAvatar {
+    height: 150px;
+    width: 150px;
 }

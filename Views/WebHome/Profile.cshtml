@@ -1,0 +1,286 @@
+﻿@{
+    Layout="_Layout";
+}
+
+
+@if (ViewBag.Session != null)
+{
+    @model ScopeIndia.Models.StudentProfile;
+
+    <div>
+        <h1 class="text-center text-warning" style="margin-top: 100px;"> PROFILE </h1>
+    </div>
+
+    <form asp-action="Profile" asp-controller="WebHome" method="post" id="profile" enctype="multipart/form-data"></form>
+
+    <div class="w-50 mx-auto" style="margin-bottom: 625px;">
+        <table class="mx-auto table-bordered w-100">
+            <tr class="text-white text-center text-uppercase fs-5  w-25 p-1">
+                <td>FIRST NAME</td>
+                <td>@ViewBag.ProfileFirstName </td>
+                <td><button class="ToggleFirstNameButton btn-primary fs-6" onclick="ToggleFirstName()">EDIT</button></td>
+            </tr>
+
+            <tr class="ToggleFirstName">
+                <td colspan="3">
+                    <input class="form-control col-4 mx-auto" asp-for="FirstName" id="FirstName" placeholder="FirstName" form="profile" />
+                    <span asp-validation-for="FirstName" class="text-danger" form="profile"></span>
+                   
+                    <button type="submit" class="form-control btn-success col-12" form="profile">Submit</button>
+
+                </td>
+            </tr>
+
+
+
+            <tr class="text-white text-center text-uppercase fs-5  w-25 p-1">
+                <td>LAST NAME</td>
+                <td>@ViewBag.ProfileLastName</td>
+                <td><button class="ToggleLastNameButton btn-primary fs-6" onclick="ToggleLastName()">EDIT</button></td>
+            </tr>
+
+            <tr class="ToggleLastName">
+                <td colspan="3">
+                    <input class="form-control col-4" asp-for="LastName" id="LastName" placeholder="LastName" form="profile" />
+                    <span asp-validation-for="LastName" class="text-danger" form="profile"></span>
+                  
+                    <button type="submit" class="form-control btn-success col-12" form="profile">Submit</button>
+
+                </td>
+            </tr>
+
+            <tr class="text-white text-center text-uppercase fs-5 w-25 p-1">
+                <td>GENDER</td>
+                <td>@ViewBag.ProfileGender</td>
+                <td></td>
+            </tr>
+
+            <tr class="text-white text-center text-uppercase fs-5 w-25 p-1">
+                <td>COUNTRY</td>
+                <td>@ViewBag.ProfileCountry</td>
+                <td><button class="ToggleCountryButton btn-primary fs-6" onclick="ToggleCountry()">EDIT</button></td>
+            </tr>
+
+            <tr class="ToggleCountry">
+                <td colspan="3">
+
+                    <input class="form-control col-4" asp-for="Country" id="Country" placeholder="Country" form="profile" />
+                    <span asp-validation-for="Country" class="text-danger" form="profile"></span>
+                   
+                    <button type="submit" class="form-control btn-success col-12" form="profile">Submit</button>
+
+                </td>
+            </tr>
+
+            <tr class="text-white text-center text-uppercase fs-5 w-25 p-1">
+                <td>STATE</td>
+                <td>@ViewBag.ProfileState</td>
+                <td><button class="ToggleStateButton btn-primary fs-6" onclick="ToggleState()">EDIT</button></td>
+            </tr>
+
+            <tr class="ToggleState">
+                <td colspan="3">
+
+                    <input class="form-control col-4" asp-for="State" id="State" placeholder="State" form="profile" />
+                    <span asp-validation-for="State" class="text-danger" form="profile"></span>
+                   
+                    <button type="submit" class="form-control btn-success col-12" form="profile">Submit</button>
+
+                </td>
+            </tr>
+
+            <tr class="text-white text-center text-uppercase fs-5 w-25 p-1">
+                <td>CITY</td>
+                <td>@ViewBag.ProfileCity</td>
+                <td><button class="ToggleCityButton btn-primary fs-6" onclick="ToggleCity()">EDIT</button></td>
+            </tr>
+
+            <tr class="ToggleCity">
+                <td colspan="3">
+
+                    <input class="form-control col-4" asp-for="City" id="City" placeholder="City" form="profile" />
+                    <span asp-validation-for="City" class="text-danger" form="profile"></span>
+                    
+                    <button type="submit" class="form-control btn-success col-12" form="profile">Submit</button>
+
+            </tr>
+
+            <tr class="text-white text-center text-uppercase fs-5 w-25 p-1">
+                <td>PHONE NUMBER</td>
+                <td>@ViewBag.ProfilePhone</td>
+                <td><button class="TogglePhoneButton btn-primary fs-6" onclick="TogglePhone()">EDIT</button></td>
+            </tr>
+
+            <tr class="TogglePhone">
+                <td colspan="3">
+
+                    <input class="form-control col-4" asp-for="PhoneNumber" id="PhoneNumber" placeholder="PhoneNumber" form="profile" />
+                    <span asp-validation-for="PhoneNumber" class="text-danger" form="profile"></span>
+                   
+                    <button type="submit" class="form-control btn-success col-12" form="profile">Submit</button>
+
+            </tr>
+
+            <tr class="text-white text-center text-uppercase fs-5 w-25 p-1">
+                <td>DATE OF BIRTH</td>
+                <td>@ViewBag.ProfileDateOfBirth.ToString("D")</td>
+                <td></td>
+            </tr>
+
+            <tr class="text-white text-center text-uppercase fs-5 w-25 p-1">
+                <td>EMAIL</td>
+                <td>@ViewBag.ProfileEmail</td>
+                <td><button class="ToggleEmailButton btn-primary fs-6" onclick="ToggleEmail()">EDIT</button></td>
+            </tr>
+
+            <tr class="ToggleEmail">
+                <td colspan="3">
+
+                    <input class="form-control col-4" asp-for="Email" id="Email" placeholder="Email" form="profile" />
+                    <span asp-validation-for="Email" class="text-danger" form="profile"></span>
+                  
+                    <button type="submit" class="form-control btn-success col-12" form="profile">Submit</button>
+                </td>
+            </tr>
+
+            <tr class="text-white text-center text-uppercase fs-5 w-25  p-1">
+                <td>HOBBIES</td>
+                <td>@ViewBag.ProfileHobbies</td>
+                <td></td>
+            </tr>
+
+            <tr class="text-white text-center text-uppercase fs-5 w-25  p-1">
+                <td>AVATAR</td>
+                <td>@ViewBag.ProfileAvatar</td>
+
+                <td><button class="ToggleAvatarButton btn-primary fs-6" onclick="ToggleAvatar()">EDIT</button></td>
+            </tr>
+
+            <tr class="ToggleAvatar">
+                <td colspan="3">
+
+                    <input class="form-control col-4" asp-for="Avatar"  id="Avatar"  placeholder="Avatar" form="profile" />
+                    <span asp-validation-for="Avatar" class="text-danger" form="profile"></span>
+                   
+                    <button type="submit" class="form-control btn-success col-12" form="profile">Submit</button>
+
+                </td>
+
+            </tr>
+
+            <tr class="text-white text-center text-uppercase fs-5 w-25  p-1">
+                <td>COURSE ID</td>
+                <td>@ViewBag.CourseID</td>
+                <td></td>
+            </tr>
+
+            <tr class="text-white text-center text-uppercase fs-5 w-25  p-1">
+                <td>COURSE NAME</td>
+                <td>@ViewBag.CourseName</td>
+                <td></td>
+
+            </tr>
+
+            <tr class="text-white text-center text-uppercase fs-5 w-25  p-1">
+                <td>COURSE DURATION</td>
+                <td>@ViewBag.CourseDuration</td>
+                <td></td>
+            </tr>
+
+            <tr class="text-white text-center text-uppercase fs-5 w-25  p-1">
+                <td>COURSE FEE</td>
+                <td>&#8377; @ViewBag.CourseFee</td>
+                <td></td>
+            </tr>
+
+            <tr class="text-white text-center text-uppercase fs-5 w-25  p-1">
+                <td>PASSWORD</td>
+                <td>
+                    @foreach (var i in ViewBag.ProfilePassword)
+                    {
+                        <span>*</span>
+                    }
+
+
+                </td>
+                <td>
+
+                    <button class="PasswordButton btn-primary fs-6" onclick="window.location.href='/WebHome/UpdatePassword';">EDIT</button>
+                </td>
+            </tr>
+        </table>
+
+        <br />
+        <br />
+        <a href="/WebHome/StudentDashBoard" class="text-decoration-none text-white"> TO CHANGE COURSE DETAILS, CLICK HERE</a>
+
+    </div>
+}
+else
+{
+    <p class="text-white">
+
+        @ViewBag.SessionOut
+
+    </p>
+}
+
+
+
+        @section scripts{
+           <script>
+        $(document).ready(function () {
+            $("button.ToggleFirstNameButton").click(function () {
+                $("tr.ToggleFirstName").toggle();
+             
+            });
+        });
+        $(document).ready(function () {
+            $("button.ToggleLastNameButton").click(function () {
+            $("tr.ToggleLastName").toggle();
+            });
+        });
+        $(document).ready(function () {
+            $("button.ToggleCountryButton").click(function () {
+                $("tr.ToggleCountry").toggle();
+            });
+        });
+        $(document).ready(function () {
+            $("button.ToggleStateButton").click(function () {
+                $("tr.ToggleState").toggle();
+            });
+        });
+        $(document).ready(function () {
+            $("button.ToggleCityButton").click(function () {
+                $("tr.ToggleCity").toggle();
+            });
+        });
+        $(document).ready(function () {
+            $("button.ToggleEmailButton").click(function () {
+                $("tr.ToggleEmail").toggle();
+            });
+        });
+        $(document).ready(function () {
+            $("button.TogglePasswordButton").click(function () {
+                $("tr.TogglePassword").toggle();
+            });
+        });
+        $(document).ready(function () {
+            $("button.ToggleCourseNameButton").click(function () {
+                $("tr.ToggleCourseName").toggle();
+            });
+        });
+        $(document).ready(function () {
+            $("button.ToggleAvatarButton").click(function () {
+                $("tr.ToggleAvatar").toggle();
+            });
+        });
+        $(document).ready(function () {
+            $("button.TogglePhoneButton").click(function () {
+                $("tr.TogglePhone").toggle();
+            });
+        });
+           </script>
+             
+        }
+        

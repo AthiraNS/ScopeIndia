@@ -8,9 +8,15 @@ namespace ScopeIndia.Data
         void Insert(Registration registration);
         void Update(Registration registration);
         void Delete(string Email);
+        Registration GetById(int Id);  //Registration GetByName(string FirstName);
         Registration GetByEmail(string Email);
-        Registration GetByName(string FirstName);
 
+        void UpdateCourseId(int Id, int CourseId);
         List<Registration> GetAll();
+
+
+        //void InsertPassword(PasswordGeneration passwordGenereation, Registration registration);
+
+
     }
 }

@@ -1,4 +1,27 @@
-﻿@model ScopeIndia.Models.Registration;
+﻿
+
+
+
+@model ScopeIndia.Models.Registration;
+@{
+    ViewData["Title"] = "Registration";
+}
+
+@if (ViewBag.RegnMessage != null)
+{
+    <hr class="col-12 text-warning" style="border:5px solid yellow" />
+    <p class="text-white text-center"><b>@ViewBag.RegnMessage</b></p>
+    <hr class="col-12 text-warning" style="border:5px solid yellow" />
+}
+
+
+@if (ViewBag.EmailVerification != null)
+{
+    <hr class="col-12 text-warning" style="border:5px solid yellow" />
+    <p class="text-white text-center"><b>@ViewBag.EmailVerification</b></p>
+    <hr class="col-12 text-warning" style="border:5px solid yellow" />
+}
+
 <div id="registration-main-container">
     <div class="text-center text-light">
         <h1 class="text-warning">Register Your Details</h1><br />
@@ -53,7 +76,7 @@
                     <div class="row mb-3">
                         <div class="col">
                             <label asp-for="Email" class="form-label">Email:</label>
-                            <input asp-for="Email" class="form-control" id="Email" />
+                            <input asp-for="Email" class="form-control" id="Email" /> <input asp-for="IsVerified" hidden value="true" />
                             <span asp-validation-for="Email" class="text-danger"></span>
                         </div>
                         <div class="col">
@@ -92,20 +115,20 @@
                                 <label asp-for="Courses" class="form-label">Choose your Course :</label>
                                 <select asp-for="Courses" class="form-select" id="Courses">
                                     <option value="">Select a course...</option>
-                                    <option value="Course1">Java Full Stack Internship</option>
-                                    <option value="Course2">Python Full Stack Internship</option>
-                                    <option value="Course3">PHP Full Stack Internship</option>
-                                    <option value="Course4">.Net Core Full Stack Internship</option>
-                                    <option value="Course5">MERN Full Stack Internship</option>
-                                    <option value="Course6">Android/iOS Mobile App Course in Google Flutter</option>
-                                    <option value="Course7">Android/iOS Mobile App Course in IONIC</option>
-                                    <option value="Course8">Website Designing Course</option>
-                                    <option value="Course9">Software Testing Advanced Course</option>
-                                    <option value="Course10">Networking, Server, & Cloud</option>
-                                    <option value="Course11">Networking, Server, & Cloud Administration</option>
-                                    <option value="Course12">AWS Architect Associate</option>
-                                    <option value="Course13">Ms Azure Cloud Administrator</option>
-                                    <option value="Course14">Red Hat Certified System Administrator (RHCSA)</option>
+                                    <option value="1">Java Full Stack Internship</option>
+                                    <option value="2">Python Full Stack Internship</option>
+                                    <option value="3">PHP Full Stack Internship</option>
+                                    <option value="4">.Net Core Full Stack Internship</option>
+                                    <option value="5">MERN Full Stack Internship</option>
+                                    <option value="6">Android/iOS Mobile App Course in Google Flutter</option>
+                                    <option value="7">Android/iOS Mobile App Course in IONIC</option>
+                                    <option value="8">Website Designing Course</option>
+                                    <option value="9">Software Testing Advanced Course</option>
+                                    <option value="10">Networking, Server, & Cloud</option>
+                                    <option value="11">Networking, Server, & Cloud Administration</option>
+                                    <option value="12">AWS Architect Associate</option>
+                                    <option value="13">Ms Azure Cloud Administrator</option>
+                                    <option value="14">Red Hat Certified System Administrator (RHCSA)</option>
                                 </select>
                                 <span asp-validation-for="Courses" class="text-danger"></span>
                             </div>
@@ -181,6 +204,12 @@
         </div>
 
     </div>
+    @if (!string.IsNullOrEmpty(ViewBag.Email))
+    {
+        <div class="alert alert-success" role="alertdialog" style="padding-bottom: 46px;">
+            @ViewBag.Email
+        </div>
+    }
 </div>
 
 @section Scripts
@@ -190,6 +219,22 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <script>
+        // $(document).ready(function () {
+        //     // Function to display alert box
+        //     function displayAlert() {
+        //         alert("Registration successful! Please check your registered email address for the password generation process.");
+        //     }
+
+        //     // Call the displayAlert function once the page is loaded
+        //     displayAlert();
+        // });
+
+
+
+
+
+
+
         $(document).ready(function () {
             
             var data = {

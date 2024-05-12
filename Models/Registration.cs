@@ -6,7 +6,7 @@ namespace ScopeIndia.Models
     {
         public int? Id { get; set; }
         [Required(ErrorMessage = "* Mandatory Field")]
-        [StringLength(25, MinimumLength = 2, ErrorMessage = "Enter a Valid Name")]
+        [StringLength(25, MinimumLength = 1, ErrorMessage = "Enter a Valid Name")]
         public string? FirstName { get; set; }
 
         [Required(ErrorMessage = "* Mandatory Field")]
@@ -49,7 +49,9 @@ namespace ScopeIndia.Models
         public IFormFile? ImageFile { get; set; }
 
         public string? ImagePath { get; set; }
-
+        public string? Otp { get; set; }
+        public string? Password { get; set; }
+        public bool IsVerified { get; set; }
 
     }
 }

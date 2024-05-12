@@ -1,0 +1,102 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+@if (ViewBag.Session != null)
+{
+
+    <div class="text-warning text-center" style="margin-top: 100px;">
+        <h1>
+            COURSE DETAILS
+        </h1>
+    </div>
+
+
+    <br />
+    <br />
+    <div class="WelcomeContainer h-75 w-75">
+
+        @{
+            var imgsrc = "/uploads/Images/" + ViewBag.ProfileAvatar;
+        }
+
+        <img src="@imgsrc" class="UploadAvatar" />
+        <a class="nav-link text-white btn rounded-pill btn-primary m-1 h-25 w-25" href="/WebHome/Profile">  WELCOME,&nbsp;@ViewBag.ProfileFirstName @ViewBag.ProfileLastName</a>
+    
+    </div>
+    
+    <br />
+    <br />
+
+    <div class="Message-container mx-auto w-75">
+    
+        <p class="text-white fs-5">
+            Thank you, @ViewBag.ProfileFirstName @ViewBag.ProfileLastName  for registering with us!!<br />
+            We look forward for your active participation in the course so that we could soar together in this flight of success.<br />
+            Please check for any discrepancies in the Profile and Course details provided below,if any. We once again wish you happy learning.
+        </p>
+
+    </div>
+
+
+    <br />
+    <br />
+
+    <div class="w-50 mx-auto">
+        <table class="mx-auto table-bordered w-100">
+            <tr class="text-white text-center text-uppercase fs-5  w-25 p-1">
+                <td>NAME</td>
+                <td>@ViewBag.ProfileFirstName @ViewBag.ProfileLastName</td>
+            </tr>
+
+            <tr class="text-white text-center text-uppercase fs-5 w-25 p-1">
+                <td>COUNTRY</td>
+                <td>@ViewBag.ProfileCountry</td>
+            </tr>
+
+            <tr class="text-white text-center text-uppercase fs-5 w-25 p-1">
+                <td>STATE</td>
+                <td>@ViewBag.ProfileState</td>
+            </tr>
+            <tr class="text-white text-center text-uppercase fs-5 w-25 p-1">
+                <td>CITY</td>
+                <td>@ViewBag.ProfileCity</td>
+            </tr>
+            <tr class="text-white text-center text-uppercase fs-5 w-25 p-1">
+                <td>COURSE NAME</td>
+                <td>@ViewBag.CourseName</td>
+            </tr>
+            <tr class="text-white text-center text-uppercase fs-5 w-25  p-1">
+                <td>COURSE DURATION</td>
+                <td>@ViewBag.CourseDuration</td>
+            </tr>
+            <tr class="text-white text-center text-uppercase fs-5 w-25  p-1">
+                <td>COURSE FEE</td>
+                <td>&#8377; @ViewBag.CourseFee</td>
+            </tr>
+        </table>
+    </div>
+
+
+    <br />
+    <br />
+
+
+    <div class="text-center text-white" style=" margin-bottom: 636px;">
+        <p class="text-center text-white">CLICK TO CHANGE COURSE</p>
+        <form asp-action="SignedUpCourses" asp-controller="WebHome" method="post">
+            <input name="CourseId" hidden value="" />
+            <button type="submit" class="btn btn-success" onclick="window.location.href='/WebHome/StudentDashboard';">EDIT COURSE</button>
+
+        </form>
+
+    </div>
+}
+else
+{
+    <p class="text-white">
+
+        @ViewBag.SessionOut
+
+    </p>
+}
